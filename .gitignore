@@ -1,0 +1,8 @@
+# IDE config
+.vscode
+
+# build folder
+build/
+
+# QT Cmake Cache
+CMakeLists.txt.user
