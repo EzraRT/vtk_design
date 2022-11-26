@@ -5,6 +5,7 @@
 
 #include <QFileDialog>
 #include <QLayout>
+#include <QMessageBox>
 #include <QVBoxLayout>
 
 ModelViewer::ModelViewer(QWidget* parent)
@@ -46,5 +47,10 @@ void ModelViewer::on_pushButton_clicked()
         viewWidget3D->loadSTL(fileName.toStdString());
     } else if (fileName.endsWith(".tif")) {
         viewWidget3D->loadDEM(fileName.toStdString());
+    } else {
+        // unsupported file type
+        // show warning dialog
+        QMessageBox::warning(this, tr("Warning"), tr("Unsupported file type!"));
+        return;
     }
 }
