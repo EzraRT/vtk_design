@@ -215,7 +215,7 @@ ViewWidget3D::~ViewWidget3D()
     delete ui;
 }
 
-QVTKOpenGLNativeWidget* ViewWidget3D::getWidget()
+QVTKOpenGLNativeWidget* ViewWidget3D::getVTKWidget()
 {
     return vtkWidget;
 }

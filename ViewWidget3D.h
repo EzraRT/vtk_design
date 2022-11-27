@@ -19,7 +19,7 @@ public:
     ViewWidget3D(QWidget* parent = nullptr);
     ~ViewWidget3D();
 
-    QVTKOpenGLNativeWidget* getWidget();
+    QVTKOpenGLNativeWidget* getVTKWidget();
     void loadSTL(std::string fileName);
     void loadDEM(std::string fileName);
 
