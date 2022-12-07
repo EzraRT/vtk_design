@@ -100,9 +100,7 @@ void ViewWidget3D::loadDEM(std::string fileName)
 
     band->RasterIO(GF_Read, 0, 0, width, height, arrbuf, width, height, GDT_Float64, 0, 0);
 
-    auto baseData = array->at(0, 0);
-
-    double maxHeight = baseData->GetNoDataValueAsDouble(), minHeight = baseData->GetNoDataValueAsDouble();
+    double maxHeight = arrbuf[0], minHeight = arrbuf[0];
 
     vtkNew<vtkPoints> points;
 
